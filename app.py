@@ -14,7 +14,7 @@ def prediction(input_list):
 
     pred = model.predict_proba([input_list])[:,1][0]
 
-    if pred > 0.5:
+    if pred > 0.25:
         return f'''You are more prone to depression
 Your Chances of being depressed are {round(pred,2)} 
 So Stop Overthinking, Have Some Water and TAKE CARE :('''
@@ -35,7 +35,7 @@ def main():
 
     apwp = st.slider('Rate Your Work/Academic Pressure ? (1 for low pressue and 5 for high pressure)', min_value = 1, max_value = 5, step = 1)
 
-    js = st.slider('Rate Your Study/Job Satisfaction ? (1 for low satisfaction and 5 for high pressure)', min_value = 1, max_value = 5, step = 1)
+    js = st.slider('Rate Your Study/Job Satisfaction ? (1 for low satisfaction and 5 for high Satisfaction)', min_value = 1, max_value = 5, step = 1)
 
     cgpa = st.text_input('Enter Your CGPA ? (Put 0 if you are a Working Professional) ')
 
