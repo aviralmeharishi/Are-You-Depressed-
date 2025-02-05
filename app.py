@@ -14,7 +14,7 @@ def prediction(input_list):
 
     pred = model.predict_proba([input_list])[:,1][0]
 
-    if pred > 0.405:
+    if pred > 0.48:
         return f'''You are more prone to depression
 Your Chances of being depressed are {round(pred,2)} 
 So Stop Overthinking, Have Some Water and TAKE CARE :('''
