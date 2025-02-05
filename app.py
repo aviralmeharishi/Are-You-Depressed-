@@ -39,7 +39,7 @@ def main():
 
     cgpa = st.number_input('Enter Your CGPA ? (Put 0 if you are a Working Professional) ', min_value = 0, max_value = 10, step = 0.01)
 
-    mp = (lambda x : 0 if x == 'Less than 5 hours' else 1 if x == '5-6 hours' else 2 if x == '7-8 hours'  else 3 if x == 'More than 8 hours')
+    mp = (lambda x : 0 if x == 'Less than 5 hours' else 1 if x == '5-6 hours' else 2 if x == '7-8 hours'  else 3)
     sd = mp(st.selectbox('What About Your Sleeping Schedule ?', ['Less than 5 hours', '5-6 hours', '7-8 hours','More than 8 hours' ]))
 
     dt = (lambda x: 0 if x == 'Unhealthy' else 1 if x == 'Moderate' else 2)(st.selectbox("How's Your Dietery Habit ? ", ['Healthy', 'Moderate', 'Unhealthy']))
@@ -54,7 +54,7 @@ def main():
     workstudyhr = st.slider('What is the number of your Work hours or Study hours ?', max_value = 24, min_value = 0, step = 1)
 
 
-    deg = (lambda x: 0 if x == 'Schooling' else 1 if x == 'Undergraduate' else 2 if x == 'Postgraduate' else 3 if x == 'PhD')\
+    deg = (lambda x: 0 if x == 'Schooling' else 1 if x == 'Undergraduate' else 2 if x == 'Postgraduate' else 3)\
         (st.selectbox(' What About Your Education Level ?', ['Schooling', 'Undergraduate', 'Postgraduate', 'PhD']))
 
 
