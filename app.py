@@ -37,7 +37,7 @@ def main():
 
     js = st.slider('Rate Your Study/Job Satisfaction ? (1 for low satisfaction and 5 for high pressure)', min_value = 1, max_value = 5, step = 1)
 
-    cgpa = st.number_input('Enter Your CGPA ? (Put 0 if you are a Working Professional) ', min_value = 0, max_value = 10, step = 0.01)
+    cgpa = st.text_input('Enter Your CGPA ? (Put 0 if you are a Working Professional) ')
 
     mp = (lambda x : 0 if x == 'Less than 5 hours' else 1 if x == '5-6 hours' else 2 if x == '7-8 hours'  else 3)
     sd = mp(st.selectbox('What About Your Sleeping Schedule ?', ['Less than 5 hours', '5-6 hours', '7-8 hours','More than 8 hours' ]))
